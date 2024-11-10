@@ -1,0 +1,50 @@
+\usepackage{graphicx}
+\usepackage{geometry}
+\usepackage{tabularx}
+\usepackage{multido}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{titlesec}
+%!注释下一行
+%\usepackage{tocloft}
+\usepackage{multirow}
+\usepackage{makecell}
+\usepackage{hyperref}
+\usepackage{ulem}
+\usepackage{pdfpages}
+\usepackage[
+    backend = bibtex,
+    style=gb7714-2015,
+    % \\gbpub=false,         % Uncomment if you do NOT want '[S.l. : s.n.]' in reference entries, GitHub Issue (#47)
+     gbnamefmt=lowercase, % Uncomment if you do NOT want uppercase author names in reference entries, GitHub Issue (#23)
+]{biblatex}
+\DeclareFieldFormat{finentrypunct}{}
+
+\usepackage{siunitx}
+\usepackage{caption}
+\usepackage{color}
+\usepackage{chngcntr}
+\usepackage{enumitem}
+\usepackage{float}
+\usepackage{listings}
+\usepackage{amssymb}
+\usepackage{etoolbox}
+\usepackage{xparse}
+\usepackage{bookmark}
+\usepackage{calc}
+% \usepackage{subcaption}
+\usepackage{subfigure}
+%!添加下一行
+ \usepackage[subfigure]{tocloft}
+% \usepackage{mathptmx}
+
+% 设置算法格式
+\usepackage{ctex}
+\usepackage[linesnumbered, ruled, lined,boxed,commentsnumbered]{algorithm2e}[1]
+\usepackage{amssymb}
+\renewcommand{\algorithmcfname}{算法}  
+\SetKwInput{KwIn}{输入}  
+\SetKwInput{KwOut}{输出}  
+
+% 防止页面只有半页图
+\renewcommand{\floatpagefraction}{.9}

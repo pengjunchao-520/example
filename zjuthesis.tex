@@ -1,0 +1,221 @@
+% Zhejiang University Graduation Thesis/Design Template
+% 老版本和新版本报错，使用查找 %! ，并修改
+% Author     : Zixuan Wang
+% Email      : zxwang42 [at] gmail.com
+% Update     : https://github.com/TheNetAdmin/zjuthesis/releases
+% Discussion : https://github.com/TheNetAdmin/zjuthesis/discussions
+% Documents  : https://thenetadmin.github.io/zjuthesis
+
+% If you have trouble using this template, please:
+%   1. First go through the online documentations mentioned above, to see if 
+%      there're already solutions.
+%   2. Go through GitHub Issue list, to see if there're discussions on similar
+%      problems
+%   3. Open a GitHub Issue to discuss with developers
+%   4. If you don't know how to use GitHub, you can send me an email
+
+\documentclass[
+    % Debugging Settings
+    PrintFilePath   = false,            % print tex file path for each page
+    % Layout Settings
+    TwoSide         = false,             % set to false if don't need empty pages
+    % Thesis Info
+    StudentName     = 彭俊超,
+    StudentID       =22234093,
+    AdvisorName     = 周晶 教授,
+    Grade           = 2022,            % only the year, no '级'
+    Major           = 机械,
+    Department      = 海洋学院,
+    SubmitDate      = 2025年06月05日,
+    MajorFormat     = general,
+    Degree          = graduate,   	   % 'undergraduate' or 'graduate'
+    Type            = thesis,          % 'thesis'   or 'design'
+    Period          = final,           % 'proposal' or 'final'
+    BlindReview     = false,            % 'false'    or 'true'
+    Language        = chinese,         % 'chinese'  or 'english'
+    % Graduate Thesis Info
+    GradLevel       = master,          % 'master' or 'doctor'
+    Topic           = 水下机器人,
+    ColaboratorName = ,
+    % Title
+    Title           = xxx,
+    TitleEng        = {{xxx}}
+]{zjuthesis}
+
+%% Uncomment the following lines if you need multi line titles on cover pages
+ \titletwolines{基于碟形海底AUV的}{敏捷运动特性研究}
+ %Fault diagnosis and fault-tolerant control of offshore wind turbines based on wavelet densely connected network
+  \titleengthreelines{Researchn on Agile Motion }{Characteristics Based on}{Dish-shaped Undersea AUV}
+%% Uncomment the following lines if you need multi line department names on cover pages
+% \departmenttwolines{学院名第一行}{学院名第二行}
+
+\newcommand{\inputundergraduate}
+{
+    \ifthenelse{\equal{\Period}{final}}
+    {
+        % Final thesis
+        % Final part\lrcorner 
+        \newcommand{\undergradcurrstage}{final}
+        \newrefsection
+        
+        \coverstyle
+        \inputpage{final/cover}
+
+        \prevstyle
+        %\inputpage{final/previous}
+        \inputpage{final/toc}
+
+        \bodystyle
+        \cleardoublepage
+        \ifthenelse{\equal{\Type}{design}}
+            {\part{毕业设计}}
+            {\part{毕业论文}}
+        
+        \inputbody{final/content}
+        \inputbody{final/post}
+
+        \poststyle
+        \inputpage{final/post}
+
+        % Proposal part
+        \renewcommand{\undergradcurrstage}{proposal}
+        \newrefsection
+
+        \coverstyle
+        \cleardoublepage
+        \ifthenelse{\equal{\Type}{design}}
+            {\part{毕业设计开题报告}}
+            {\part{毕业论文开题报告}}
+
+        \inputpage{proposal/cover}
+        \inputpage{proposal/previous}
+        
+        \bodystyle
+        \inputbody{proposal/content}
+
+        \poststyle
+        \inputpage{proposal/post}
+    }
+    {
+        % Thesis proposal
+        \newcommand{\undergradcurrstage}{proposal}
+
+        \coverstyle
+        \inputpage{proposal/cover}
+    
+        % 'proposal' previous part uses 'empty' page style,
+        % as shown in cs undergrad template.
+        \inputpage{proposal/previous}
+        
+        \prevstyle
+        \inputpage{proposal/toc}
+    
+        \bodystyle
+        \inputbody{proposal/content}
+        
+        \poststyle
+        \inputpage{proposal/post}
+    }
+}
+
+
+\newcommand{\inputgraduate}
+{
+	
+	\ifthenelse{\equal{\Period}{final}}
+	{
+		% Final thesis
+
+		\coverstyle
+		\inputpage{final/cover}
+		
+		\prevstyle
+		\inputpage{final/previous}
+		\inputpage{final/toc}
+		
+		% Main contents
+		\bodystyle
+		\inputbody{final/content - 1-2}
+        \inputbody{final/content - 2}
+        \inputbody{final/content - 3}
+        % \inputbody{final/content - 4}
+        % \inputbody{final/content - 5}
+        % \inputbody{final/content - 6}
+		
+		% Post part
+		\poststyle
+        %\bodystyle
+		\inputbody{final/post}
+	}
+	{
+		% Thesis proposal
+		\newcommand{\gradcurrstage}{proposal}
+		
+		\coverstyle
+		\inputpage{proposal/cover}
+		
+		% 'proposal' previous part uses 'empty' page style,
+		% as shown in cs undergrad template.
+		%\inputpage{proposal/previous}
+		
+		\prevstyle
+		\inputpage{proposal/toc}
+		
+		\bodystyle
+		\inputbody{proposal/content}
+		
+		\poststyle
+	    \inputbody{proposal/post}
+	}	
+	
+	
+
+}
+\usepackage{booktabs}
+\usepackage{amsmath}
+\usepackage{listings}
+\usepackage{ctex}
+\usepackage{subfigure}
+%!添加下一行
+ \usepackage[subfigure]{tocloft}
+\usepackage{url}
+%\usepackage{txfonts}
+% 用来设置附录中代码的样式
+
+\lstset{
+    basicstyle          =   \sffamily,          % 基本代码风格
+    keywordstyle        =   \bfseries,          % 关键字风格
+    commentstyle        =   \rmfamily\itshape,  % 注释的风格，斜体
+    stringstyle         =   \ttfamily,  % 字符串风格
+    flexiblecolumns,                % 别问为什么，加上这个
+    numbers             =   left,   % 行号的位置在左边
+    showspaces          =   false,  % 是否显示空格，显示了有点乱，所以不现实了
+    numberstyle         =   \zihao{-5}\ttfamily,    % 行号的样式，小五号，tt等宽字体
+    showstringspaces    =   false,
+    captionpos          =   t,      % 这段代码的名字所呈现的位置，t指的是top上面
+    frame               =   lrtb,   % 显示边框
+}
+
+\lstdefinestyle{Python}{
+    language        =   Python, % 语言选Python
+    basicstyle      =   \zihao{-5}\ttfamily,
+    numberstyle     =   \zihao{-5}\ttfamily,
+    keywordstyle    =   \color{blue},
+    keywordstyle    =   [2] \color{teal},
+    stringstyle     =   \color{magenta},
+    commentstyle    =   \color{red}\ttfamily,
+    breaklines      =   true,   % 自动换行，建议不要写太长的行
+    columns         =   fixed,  % 如果不加这一句，字间距就不固定，很丑，必须加
+    basewidth       =   0.5em,
+}
+
+\begin{document}
+
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+    \inputundergraduate{}
+}
+{
+    \inputgraduate{}
+}
+\end{document}

@@ -1,0 +1,18 @@
+% Set default caption font type
+%\DeclareCaptionFont{figurefont}{\zihao{5}\bfseries\songti}
+\DeclareCaptionFont{figurefont}{\zihao{5}\fangsong}
+\captionsetup[figure]{font=figurefont , labelsep=space}
+\captionsetup[table]{font=figurefont , labelsep=space}
+
+% `position` doesn't actually set the caption position,
+% It only determines weather the `skip` inserted above/below `caption`
+\captionsetup{position=bottom}
+
+%% Uncomment the following lines to use dual-language caption
+%% E.g.: https://github.com/TheNetAdmin/zjuthesis/issues/181
+% \usepackage[list=off]{bicaption}
+% \DeclareCaptionOption{bi-second}[]{%
+%     \def\tablename{Table}%
+%     \def\figurename{Figure}%
+% }
+% \captionsetup[bi-second]{bi-second}

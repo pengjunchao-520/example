@@ -1,0 +1,26 @@
+% Set page layout
+\ifthenelse{\equal{\Degree}{undergraduate}}
+{
+    % The top and left margins are set to 2.5 cm according to undergrad school standard
+    % https://github.com/TheNetAdmin/zjuthesis-std/blob/b78c2147d329b9b3d18885a366e4f6040a8a9c8d/standard/README.rst
+    \geometry{
+        a4paper,
+        marginpar=0pt,
+        includeheadfoot,
+        vmargin={2.5cm, 2.0cm},
+        hmargin={2.5cm, 2.0cm},
+        headsep=4mm
+    }
+}
+{
+    \geometry{
+        a4paper,
+        marginpar=0pt,
+        includeheadfoot,
+        %vmargin={2.0cm, 2.0cm},  %yulins
+        %hmargin={2.5cm, 2.5cm},
+        vmargin={1 in, 1 in},
+        hmargin={1.25 in, 1.25 in},
+        %headsep=4mm
+    }
+}

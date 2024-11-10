@@ -1,0 +1,205 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.2 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated as
+% required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+\datalist[entry]{none/global//global/global}
+  \entry{ref1}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{王潘宇.基于强化学习的AUV运动控制方法研究[D].哈尔滨工程大学,2022.}
+  \endentry
+
+  \entry{ref2}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{郑海斌.水下机器人水动力性能分析及其运动控制方法的研究[D].哈尔滨工业大学,2018.}
+  \endentry
+
+  \entry{ref3}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{张冬梅.多关节水下机器人的动力学分析与运动控制研究[D].杭州电子科技大学,2023.}
+  \endentry
+
+  \entry{ref4}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{程健.水下机器人水动力性能及其运动控制研究[D].大连理工大学,2018.}
+  \endentry
+
+  \entry{ref5}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{叶梦佳.高速无人水下航行器运动控制系统设计与实现[D].浙江大学,2022.}
+  \endentry
+
+  \entry{ref6}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{邓鲁克,吕东坡.基于遗传算法对控制水下机器人运动姿态进行PID参数整定[J].制造业自动化.}
+  \endentry
+
+  \entry{ref7}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{杨睿.
+  水下机器人建模与鲁棒控制研究[D].中国海洋大学,2016.}
+  \endentry
+
+  \entry{ref8}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{李亚鑫,刘里宵,王宇.欠驱动水下机器人的最优等效补偿轨迹跟踪控制[J].控制与决策,2024,39(09):2923-2931.DOI:10.13195/j.kzyjc.2023.0845.}
+  \endentry
+
+  \entry{ref9}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Liu L, Zhang L, Pan G, et al. Robust yaw control of
+  autonomous underwater vehicle based on fractional-order PID controller[J].
+  Ocean Engineering, 2022, 257: 111493.}
+  \endentry
+
+  \entry{ref10}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{L. Qiao and W. Zhang, "Trajectory Tracking Control of AUVs
+  via Adaptive Fast Nonsingular Integral Terminal Sliding Mode Control," in
+  IEEE Transactions on Industrial Informatics, vol. 16, no. 2, pp. 1248-1258,
+  Feb. 2020, doi: 10.1109/TII.2019.2949007.}
+  \endentry
+
+  \entry{ref11}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{K. Eguchi, Y. Yashiro, S. Yasuda, I. Awaya, T. Adachi and Y.
+  Yamauchi, "Low-speed and Low-Altitude AUV Control, " 2020 IEEE/OES Autonomous
+  Underwater Vehicles Symposium (AUV), St. Johns, NL, Canada, 2020, pp. 1-5,
+  doi: 10.1109/AUV50043.2020.9267916.}
+  \endentry
+
+  \entry{ref12}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{C. Wang, W. Cai, J. Lu, X. Ding and J. Yang, "Design,
+  Modeling, Control, and Experiments for Multiple AUVs Formation," in IEEE
+  Transactions on Automation Science and Engineering, vol. 19, no. 4, pp.
+  2776-2787, Oct. 2022, doi: 10.1109/TASE.2021.3094539.}
+  \endentry
+
+  \entry{ref13}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{V. Filaretov and D. Yukhimets, "Formation Control of AUV on
+  the Base of Visual Tracking of AUV-Leader," 2021 International Russian
+  Automation Conference (RusAutoCon), Sochi, Russian Federation, 2021, pp.
+  868-874, doi: 10.1109/RusAutoCon52004.2021.9537566.}
+  \endentry
+
+  \entry{ref14}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{H. F. Ortiz Villasuso, E. Matías Robador and S. Pedre, "AUV
+  Depth Control for Visual Inspection in Closed Environments using Minimal
+  Order Observers," 2020 IEEE/OES Autonomous Underwater Vehicles Symposium
+  (AUV), St. Johns, NL, Canada, 2020, pp. 1-5, doi:
+  10.1109/AUV50043.2020.9267911.}
+  \endentry
+
+  \entry{ref15}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{W. Akram and A. Casavola, "A Visual Control Scheme for AUV
+  Underwater Pipeline Tracking," 2021 IEEE International Conference on
+  Autonomous Systems (ICAS), Montreal, QC, Canada, 2021, pp. 1-5, doi:
+  10.1109/ICAS49788.2021.9551173.}
+  \endentry
+
+  \entry{ref16}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{F. Vladimir and Y. Dmitry, "Control system with reference
+  model for spatial motion of a cargo AUV," 2020 International Conference on
+  Control, Automation and Diagnosis (ICCAD), Paris, France, 2020, pp. 1-6, doi:
+  10.1109/ICCAD49821.2020.9260555.}
+  \endentry
+
+  \entry{ref17}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{包海默,李京浩,冯鸣,等.小型自主式水下机器人驱动装置悬停功能仿生设计[J].机械设计,2022,39(08):129-135.DOI:10.13841/j.cnki.jxsj.2022.08.021.}
+  \endentry
+
+  \entry{ref18}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{林银福,轻型四自由度AUV系统设计与运动性能分析[D].哈尔滨工业大学,2020.}
+  \endentry
+
+  \entry{ref20}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{FOSSEN T I.Guidance and control of ocean
+  vehicles[M].Chichester:John Wiley$\&$Sons Inc,1994.}
+  \endentry
+
+  \entry{ref19}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{Wadoo, S.,$\&$ Kachroo, P. (2011). Autonomous Underwater
+  Vehicles: Modeling, Control Design and Simulation (1st ed.). CRC Press.
+  https://doi.org/10.1201/b10463}
+  \endentry
+
+  \entry{ref29}{article}{}
+    \field{labeltitlesource}{title}
+  \field{title}{吴乃龙.水下机器人建模与非线性自适应控制研究[D].上海交通大学,
+  2018.}
+  \endentry
+
+  \entry{ref25}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{ArduPilot Autopilot
+  Suite.http://ardupilot.org/ardupilot/.Accessed 2016.}
+  \endentry
+
+  \entry{ref21}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{CUI R,ZHANG X,CUI D.Adaptive sliding-mode attitude control
+  for autonomous underwater vehicles with input nonlinearities[J].Ocean
+  Engineering,2016,123:45–54.}
+  \endentry
+
+  \entry{ref22}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{SARHADI P,NOEI A R,KHOSRAVI A.Model reference adaptive PID
+  control with antiwindup compensator for an autonomous underwater
+  vehicle[J].Robotics and Autonomous Systems,2016,83:87–93.}
+  \endentry
+
+  \entry{ref23}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{TEDRAKE R,the Drake Development Team.Drake:A
+  planning,control,and analysis toolbox for nonlinear dynamical
+  systems.2016.http://drake.mit.edu.}
+  \endentry
+
+  \entry{ref27}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{HUO X,WANG X,GE T.Impulse control method for hydraulic
+  propulsion system used in 3500 m work-class ROV[J].Applied Ocean
+  Research,2016,60:75–83.}
+  \endentry
+
+  \entry{ref26}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{LAMB H.Hydrodynamics[M].Mineola,New York:Dover
+  Publications,2015.}
+  \endentry
+
+  \entry{ref30}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{PRESTERO T T J. Verification of a six-degree of freedom
+  simulation model for the REMUS autonomous underwater vehicle. 2001.}
+  \endentry
+
+  \entry{ref24}{article}{}
+    \field{labeltitlesource}{title}
+    \field{title}{ArduSub GitBook.https://www.ardusub.com/.Accessed 2017.}
+  \endentry
+\enddatalist
+\endinput
