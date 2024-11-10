@@ -1,0 +1,60 @@
+\cleardoublepage
+\chapternonum{摘要}
+
+复杂海洋环境会使海上风电水下结构受到海水侵蚀、海浪冲击、海水冲刷、生物附着等影响，导致结构损伤、阴极缺失或海缆悬空等问题，危害运行安全。
+利用水下机器人和声光磁技术开展水下结构巡检，对于保障海上风电结构完整性和提升运维效能具有重要意义。
+目前，海上风电水下结构巡检主要采用声纳成像获取海缆悬空与海底冲刷情况，同时利用水下高清相机拍摄局部结构损伤。
+然而，声学成像存在分辨率低、纹理缺失和价格高昂等问题，也无法查看表面生物附着情况，
+而视觉三维重建能够建立包含表面纹理信息的高精度水下三维结构模型，有利于实现海上风电水下结构的精准感知。
+因此，本文主要围绕海上风电水下结构巡检问题，研究水下视觉三维重建算法与系统，形成水下结构精准感知能力，从而提升海上风电运维水平。
+
+首先，针对水下图像折射畸变问题，提出一种基于成像坐标约束的水下双目相机折射标定算法和水下图像折射复原算法。
+具体而言，构建了基于光线跨介质折射定律的水下双目相机成像模型，提出了基于棋盘格坐标拟合优化方法的水下相机折射标定算法，提出了基于视差图和折射模型的水下三维点计算和反投影折射复原算法，实现了水下三维点坐标的精确计算和图像折射复原。最后，通过仿真试验对比分析了算法的折射参数计算精度以及稳定性。
+
+
+其次，设计了基于“双目视觉-惯性-深度”多传感器紧耦合的水下SLAM (Simultaneous Localization and Mapping)算法。
+具体而言，通过所设计的共视关键帧和滑动窗口法，融合双目相机、惯性测量单元以及深度计数据，联合计算相机水下位姿。
+在此基础上，针对已有数据集开展对比试验，其中在水下Cave数据集中的完成度达100\%，绝对轨迹均方根误差结果为0.32 m。结果表明，本文算法与经典SLAM算法ORB-SLAM3、VINS-Fusion在空气中有相似精度，而在水下场景数据集中有着更好的鲁棒性和更高的精度。
+
+
+再次，设计了基于截断符号距离函数的水下场景实时三维点云融合算法，以及基于网格优化的离线点云后处理算法。
+其中，后处理算法包括德劳内三角剖分、表面网格提取、网格细化和纹理贴附。
+在此基础上，针对ICL-NUIM数据集进行三维重建精度测试，计算得到点云坐标平均误差为0.0074 m，通过对比现有实时三维重建算法ROSE-Fusion和Bundle-Fusion，证明了本文算法在精度和视觉效果上均有提升。
+
+最后，研制了水下双目视觉三维重建系统，并完成了双目相机标定、图像折射复原和水下三维重建试验验证。
+在相机标定试验中，本文所提算法坐标计算精度为98.46\%，优于其他对比算法；
+在折射复原试验中，通过对比所恢复图像与真值图像的像素坐标差，证明本文算法能实现像素级的图像复原，误差为Pinax算法的1/3左右；
+水池模型试验结果表明，本文提出的算法可以实现海上风电导管架模型的水下三维重建和精确测量
+，最大尺寸测量误差为0.004283 m，相较而言，主流SLAM算法均发生跟踪丢失，重建算法ColMap和ROSE-Fusion计算点云失败，证明了本文三维重建算法在水下场景中的优越性和稳定性。\newline
+
+
+
+\noindent \textbf{关键词：} 海上风电运维，水下三维重建，双目视觉，水下相机标定，同步定位与建图，多传感器数据融合
+
+\cleardoublepage
+\chapternonum{Abstract}
+
+Complex marine environments expose underwater structures of offshore wind turbines to seawater corrosion, wave impacts, scouring, and biological fouling, resulting in structural damage, anode depletion, or suspended power cables, thus compromising operational safety.
+The use of underwater robots and sonar-optic-magnetic technologies for inspecting these structures is crucial for ensuring the integrity of offshore wind turbines and enhancing maintenance efficacy.
+Currently, inspections of underwater structures in offshore wind turbines primarily utilize sonar imaging to detect suspended cables and seabed scour, while underwater high-definition cameras are used to capture localized structural damages.
+However, acoustic imaging suffers from low resolution, lack of texture, and high costs, and fails to reveal surface biofouling. Visual 3D reconstruction, on the other hand, can create high-precision underwater 3D structural models that include surface texture information, facilitating precise perception of the underwater structures.
+Therefore, this paper focuses on the issue of inspecting underwater structures in offshore wind turbines, studying underwater visual 3D reconstruction algorithms and systems to develop precise perception capabilities, thereby enhancing the maintenance level of offshore wind power.
+
+Firstly, addressing the issue of refraction distortion in underwater images, a calibration algorithm for underwater stereo cameras based on imaging coordinate constraints, and an image refraction restoration algorithm are proposed.
+Specifically, an underwater stereo camera imaging model based on the laws of refraction across media has been developed, along with a calibration method using chessboard grid coordinate fitting and optimization, and a calculation and back-projection refraction restoration algorithm for underwater 3D points based on disparity maps and refraction models, enabling precise computation of underwater 3D point coordinates and image refraction restoration.
+Lastly, the accuracy and stability of the refraction parameter calculations were analyzed and compared through simulation experiments.
+
+Secondly, an underwater SLAM (Simultaneous Localization and Mapping) algorithm based on a tightly coupled ``stereo vision-inertial-depth" multi-sensor framework was designed.
+Specifically, by employing designed co-visible keyframes and the sliding window method, data from stereo cameras, inertial measurement units, and depth meters were integrated to jointly calculate the underwater position of the camera.
+Comparative experiments were conducted on existing datasets, notably achieving a 100\% completion rate in the underwater Cave dataset, with an absolute trajectory root-mean-square error of 0.32 m.
+The results show that the algorithm presented achieves similar accuracy to classical SLAM algorithms such as ORB-SLAM3 and VINS-Fusion in air, but exhibits superior robustness and higher accuracy in underwater environments.
+
+Additionally, a real-time 3D point cloud fusion algorithm for underwater scenes based on truncated signed distance functions, and an offline point cloud post-processing algorithm optimized through meshing, were designed.
+The post-processing algorithm includes Delaunay triangulation, surface mesh extraction, mesh refinement, and texture mapping.
+Based on this, a precision test of 3D reconstruction was conducted on the ICL-NUIM dataset, achieving a point cloud coordinate average error of 0.0074 m. By comparing with existing real-time 3D reconstruction algorithms, ROSE-Fusion and Bundle-Fusion, the proposed algorithm demonstrated improvements in both accuracy and visual effects.
+
+Lastly, an underwater stereo vision 3D reconstruction system was developed, and experiments for stereo camera calibration, image refraction restoration, and underwater 3D reconstruction verification were completed.
+In camera calibration experiments, the algorithm proposed achieved a coordinate calculation accuracy of 98.46\%, outperforming other algorithms; in refraction restoration experiments, by comparing the restored image pixel coordinates with the true image, it was demonstrated that the algorithm can achieve pixel-level image restoration, with errors about one-third of those produced by the Pinax algorithm; model pool tests showed that the algorithm proposed could perform underwater 3D reconstruction and precise measurement of offshore wind turbine jacket models, with a maximum size measurement error of 0.004283 m. Compared to mainstream SLAM algorithms, which experienced tracking losses, and reconstruction algorithms like ColMap and ROSE-Fusion, which failed to compute point clouds, this demonstrates the superiority and stability of the proposed 3D reconstruction algorithm in underwater scenarios.\newline
+
+
+\noindent \textbf{Keywords:} Offshore wind turbines maintenance, Underwater 3D reconstruction, Stereo vision, Underwater camera calibration, Simultaneous localization and mapping, Multi-sensor fusion, 
